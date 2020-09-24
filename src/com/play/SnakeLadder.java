@@ -9,6 +9,7 @@ public class SnakeLadder {
 		System.out.println("Welcome to Snake and Ladder game");
 		
 		int position = 0;
+		while(position <= 100) {
 		System.out.println("Player at : "+position);
 		
 		int valDice=(int)(Math.floor(Math.random()*10)%6)+1;
@@ -24,9 +25,12 @@ public class SnakeLadder {
 		}
 		else {
 			position-=valDice;
+			if(position < 0)
+				position = 0;
 			System.out.println("Player moves back at "+position);
 		}
 
+	}
 	}
 
 }
