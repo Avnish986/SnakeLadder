@@ -6,17 +6,14 @@ public class SnakeLadder {
 	public static final int ladder=1;
 	public static final int snake=2;
 	public static void main(String[] args) {
-		System.out.println("Welcome to Snake and Ladder game");
-		
-		int position = 0;
+		System.out.println("Welcome to game");
+		int position=0; int cnt=0;
 		while(position < 100) {
-		System.out.println("Player at : "+position);
-		
 		int valDice=(int)(Math.floor(Math.random()*10)%6)+1;
+		cnt++;
 		System.out.println("player rolled no. "+valDice);
 		
 		int option=(int)(Math.floor(Math.random()*10)%3);
-		
 		if(option == noPlay)
 			System.out.println("Player stays at "+position);
 		else if(option == ladder) {
@@ -34,7 +31,12 @@ public class SnakeLadder {
 				position = 0;
 			System.out.println("Player moves back at "+position);
 		}
+		
+	}
+	System.out.println("No of times dice rolled was : "+cnt);
+		
 	}
 	}
+	
 
-}
+
